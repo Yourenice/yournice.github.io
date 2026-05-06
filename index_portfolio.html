@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>My Portfolio</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #b1002c, hsl(55, 100%, 75%), #cfb8d0);
+            font-family: Arial;
+        }
+
+        .profile-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .profile-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 20px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .info-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+            height: 100%;
+        }
+
+        .navbar {
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .bg-glass {
+            background: rgba(255, 255, 255, 0.8) !important;
+            backdrop-filter: blur(10px);
+        }
+
+        .badge {
+            padding: 8px 12px;
+            border-radius: 8px;
+        }
+
+        .bg-soft-primary {
+            background-color: #e7f1ff;
+            color: #0d6efd;
+        }
+
+        .external-link-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid #b1002c; /* Accents the box with your theme color */
+            transition: transform 0.3s ease;
+        }
+
+        .external-link-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container py-5">
+
+        <div class="row">
+
+            <div class="col-md-4 mb-4">
+                <div class="profile-card">
+                    <img src="yuniz.jpg" style="width:128px;height:128px;">
+                    <h4>Rina Yuniz E. Marfa</h4>
+                    <p class="text-muted">Web Developer</p>
+                    <hr>
+                    <p><strong>Email</strong><br>yunizmarfa16@gmail.com</p>
+                    <p><strong>Phone</strong><br>09150271905</p>
+                    <p><strong>Location</strong><br>Tanauan City Batangas, Philippines</p>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+
+                <nav class="navbar navbar-light bg-white px-4 mb-4 d-flex justify-content-between">
+                    <a class="nav-link" href="#about">About</a>
+                    <a class="nav-link" href="#cv">CV</a>
+                    <a class="nav-link" href="#portfolio">Portfolio</a>
+                    <a class="nav-link" href="#awards">Awards</a>
+                    <a class="nav-link" href="#talks">Talks</a>
+                    <a class="nav-link" href="#art">Art</a>
+                </nav>
+
+                <div class="content-wrapper">
+
+                    <section id="about" class="mb-5">
+                        <h2 class="section-title">About Me</h2>
+                        <div class="card shadow-sm border-0 p-4 bg-glass">
+                            <p class="lead">I am a versatile performer and aspiring developer based in Tanauan.</p>
+                            <p>I perform as a singer and play as a player.</p>
+                        </div>
+                    </section>
+
+                    <section id="portfolio" class="mb-5">
+                        <h2 class="section-title">Portfolio</h2>
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="card project-card h-100 border-0 shadow-sm">
+                                    <div class="project-image-wrapper">
+                                        <img src="yuniz1.jpg" alt="VARSITY" class="img-fluid w-100" style="height: 200px; object-fit: cover;">
+                                    </div>
+                                    <div class="card-body">
+                                        <h5>Volleyball Highlights</h5>
+                                        <p class="text-muted small">Personal projects and achievements.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="external-link-card h-100 d-flex flex-column justify-content-center align-items-center text-center">
+                                    <div class="mb-3">
+                                        <span style="font-size: 2rem;">🌐</span>
+                                    </div>
+                                    <h5>Main Project Site</h5>
+                                    <p class="text-muted small">Visit my A02.</p>
+                                    <a href="https://yourenice.github.io/yuniz.github.io/" target="_blank" class="btn btn-dark w-100">Open Link</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>a
+
+                    <section id="cv" class="mb-5">
+                        <h2 class="section-title">CV</h2>
+                        <div class="card shadow-sm border-0 p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="icon-box me-3">🎓</div>
+                                <div>
+                                    <h5 class="mb-0">Jesus Is Lord</h5>
+                                    <small class="text-muted">Junior & Senior High School Graduate</small>
+                                </div>
+                            </div>
+                            <hr>
+                            <h5 class="mb-3">Skills</h5>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge bg-soft-primary">Front-end Development</span>
+                                <span class="badge bg-soft-primary">Public Performance</span>
+                                <span class="badge bg-soft-primary">Event Hosting</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <h3 class="mb-3">What I Do</h3>
+                    <div class="row g-4 mb-5">
+                        <div class="col-md-4">
+                            <div class="info-card">
+                                <h5>Front-end Development</h5>
+                                <p class="small">I build responsive websites using HTML, CSS, JavaScript and Bootstrap.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="info-card">
+                                <h5>Graphic Design</h5>
+                                <p class="small">I create UI/UX designs and digital graphics using modern design tools.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="info-card">
+                                <h5>Artificial Intelligence</h5>
+                                <p class="small">I explore AI tools and integrations to build smarter applications.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

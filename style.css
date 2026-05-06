@@ -1,0 +1,142 @@
+   /* 1. Global Styles & Background */
+    body {
+        background: linear-gradient(135deg, #f0b4f9 0%, #d7a0bf 50%, #cfb8d0 100%);
+        background-attachment: fixed;
+        font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        color: #333;
+    }
+
+    /* 2. Layout Containers */
+    .container {
+        max-width: 1200px;
+    }
+
+    /* 3. The Left Sidebar (Profile Card) */
+    .profile-card {
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 25px;
+        padding: 40px 25px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        position: sticky;
+        top: 20px;
+    }
+
+    .profile-card h4 {
+        font-weight: 700;
+        margin-top: 15px;
+        color: #2d3436;
+    }
+
+    .profile-card hr {
+        border-top: 1px solid #eee;
+        margin: 25px 0;
+    }
+
+    /* 4. Navbar Styling */
+    .navbar {
+        background: rgba(255, 255, 255, 0.9) !important;
+        backdrop-filter: blur(5px);
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        padding: 10px 20px !important;
+    }
+
+    .nav-link {
+        font-weight: 500;
+        color: #636e72 !important;
+        transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+        color: #ff0040 !important;
+    }
+
+    /* 5. Right Content Cards (The Sections) */
+    .section-title {
+        font-weight: 800;
+        margin-bottom: 25px;
+        position: relative;
+        display: inline-block;
+        padding-bottom: 5px;
+    }
+
+    .section-title::after {
+        content: "";
+        position: absolute;
+        width: 50px;
+        height: 4px;
+        background: #fff67b;
+        bottom: 0;
+        left: 0;
+        border-radius: 2px;
+    }
+
+    .bg-glass {
+        background: rgba(255, 255, 255, 0.7) !important;
+        backdrop-filter: blur(10px);
+        border-radius: 20px !important;
+    }
+
+    /* 6. "What I Do" Grid Cards */
+    .info-card {
+        background: white;
+        border-radius: 20px;
+        padding: 25px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+        border: 1px solid #f1f1f1;
+        transition: all 0.3s ease;
+        height: 100%;
+    }
+
+    .info-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        border-color: #ff7b81;
+    }
+
+    .info-card h5 {
+        font-weight: 700;
+        color: #2d3436;
+        margin-bottom: 12px;
+    }
+
+    .info-card p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: #fbf583;
+    }
+
+    /* 7. Portfolio Cards */
+    .project-card {
+        overflow: hidden;
+        border-radius: 20px !important;
+        transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+        transform: scale(1.02);
+    }
+
+    /* 8. Skills Badges */
+    .bg-soft-primary {
+        background-color: #f3e8ff;
+        color: #861e33;
+        padding: 8px 15px;
+        border-radius: 10px;
+        font-weight: 600;
+    }
+
+    .icon-box {
+        font-size: 1.5rem;
+        background: #fff;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
