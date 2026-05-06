@@ -1,6 +1,5 @@
 const apiUrl = "https://api.sampleapis.com/beers/ale";
 let allBeers = []; 
-
 async function fetchBeers() {
     const beerContainer = document.getElementById('beer-container');
     const loader = document.getElementById('loader');
@@ -14,16 +13,17 @@ async function fetchBeers() {
         loader.classList.add('d-none');
     } catch (error) {
         console.error("Error:", error);
-        loader.innerHTML = "<p class='text-danger'>Page not loading.</p>";
+       
+        loader.innerHTML = "<p class='text-danger'>Failed to load data. Please refresh the page.</p>";
     }
 }
 
 function displayBeers(beers) {
     const beerContainer = document.getElementById('beer-container');
-    beerContainer.innerHTML = ""; 
+    beerContainer.innerHTML = ""; // Clear the container
 
     beers.forEach(beer => {
-    
+        // Some images in the API are broken, so we use a placeholder
         const imgUrl = beer.image ? beer.image : 'https://via.placeholder.com/150?text=No+Image';
         
         const cardHtml = `
@@ -45,7 +45,7 @@ function displayBeers(beers) {
     });
 }
 
-// Search Functionality
+
 document.getElementById('searchInput').addEventListener('input', (e) => {
     const searchTerm = e.target.value.toLowerCase();
     const filteredBeers = allBeers.filter(beer => 
@@ -54,5 +54,5 @@ document.getElementById('searchInput').addEventListener('input', (e) => {
     displayBeers(filteredBeers);
 });
 
-// Run
+
 fetchBeers();
