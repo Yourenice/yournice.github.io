@@ -1,1 +1,27 @@
+.card {
+    border: none;
+    transition: transform 0.2s;
+    height: 100%;
+}
 
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.beer-img {
+    height: 200px;
+    object-fit: contain; 
+    padding: 15px;
+    background-color: #f8f9fa;
+}
+
+.price-tag {
+    font-weight: bold;
+    color: #198754;
+}
+
+.rating {
+    color: #ffc107;
+    font-size: 0.9rem;
+}
