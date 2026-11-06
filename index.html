@@ -71,6 +71,69 @@
         .external-link-card:hover {
             transform: translateY(-5px);
         }
+
+        /* Smooth in-page navigation */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Nav: desktop = top; mobile = fixed bottom + smooth transitions */
+        .portfolio-nav {
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+        }
+
+        .portfolio-nav .nav-link {
+            transition: color 0.25s ease, transform 0.2s ease;
+        }
+
+        .portfolio-nav .nav-link:active {
+            transform: scale(0.97);
+        }
+
+        @media (max-width: 767.98px) {
+            body {
+                padding-bottom: calc(5rem + env(safe-area-inset-bottom, 0px));
+            }
+
+            .portfolio-nav {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 1030;
+                width: 100%;
+                max-width: 100%;
+                margin: 0 !important;
+                margin-bottom: 0 !important;
+                border-radius: 15px 15px 0 0;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                row-gap: 0.25rem;
+                padding: 0.65rem 0.5rem calc(0.65rem + env(safe-area-inset-bottom, 0px)) !important;
+                box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.12);
+            }
+
+            .portfolio-nav .nav-link {
+                flex: 1 1 auto;
+                min-width: 0;
+                text-align: center;
+                padding: 0.4rem 0.2rem !important;
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .portfolio-nav {
+                position: relative;
+                bottom: auto;
+                left: auto;
+                right: auto;
+                width: auto;
+                max-width: none;
+                border-radius: 15px;
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            }
+        }
     </style>
 </head>
 
@@ -94,7 +157,7 @@
 
             <div class="col-md-8">
 
-                <nav class="navbar navbar-light bg-white px-4 mb-4 d-flex justify-content-between">
+                <nav class="navbar navbar-light bg-white px-4 mb-4 d-flex justify-content-between portfolio-nav">
                     <a class="nav-link" href="#about">About</a>
                     <a class="nav-link" href="#cv">CV</a>
                     <a class="nav-link" href="#portfolio">Portfolio</a>
@@ -124,7 +187,7 @@
                                     </div>
                                     <h5>Midterm Project</h5>
                                     <p class="text-muted small">View my midterm requirements and projects.</p>
-                                    <a href=" https://yourenice.github.io/midterm/" target="_blank" class="btn btn-danger w-100">View Midterm</a>
+                                    <a href="https://yourenice.github.io/midterm/" target="_blank" class="btn btn-danger w-100">View Midterm</a>
                                 </div>
                             </div>
 
